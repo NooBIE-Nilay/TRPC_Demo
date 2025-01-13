@@ -2,7 +2,7 @@ import { addInputType } from "../common/types";
 import { publicProcedure, router } from "./trpc";
 import { createHTTPServer } from "@trpc/server/adapters/standalone";
 const appRouter = router({
-  addTwoNumbers: publicProcedure.input(addInputType).query(async (opts) => {
+  addTwoNumber: publicProcedure.input(addInputType).query(async (opts) => {
     const username = opts.ctx.username;
     const number_1 = opts.input.number_1;
     const number_2 = opts.input.number_2;

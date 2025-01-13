@@ -16,13 +16,13 @@ const trpc = createTRPCProxyClient<AppRouter>({
 async function main() {
   const number_1 = 100;
   const number_2 = 300;
-  const res = await trpc.addTwoNumbers.query({ number_1, number_2 });
+  const res = await trpc.addTwoNumber.query({ number_1, number_2 });
   console.log(
-    `${number_1} + ${number_2} = ${res.result} with username ${res.username}      `
+    `${number_1} + ${number_2} = ${res.result} with username ${res.result}      `
   );
 }
 main();
-trpc.addTwoNumbers
+trpc.addTwoNumber
   .query({
     number_1: 10,
     number_2: 20,
